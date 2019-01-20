@@ -5,4 +5,10 @@ class Api::ActorsController < ApplicationController
     render 'actor.json.jbuilder'
   end
 
+  def query_actor
+    id_number = params["id"]
+    @single_actor = Actor.find_by(id: id_number)
+    render 'query_actor.json.jbuilder'
+  end
+
 end

@@ -16,6 +16,15 @@ Rails.application.routes.draw do
 
     get "/star_wars_iv" => "movies#star_wars"
 
+    #display a single actor using a query parameter
+    get "/query_actor" => "actors#query_actor"
+
+    #segment parameter
+    get "/query_actor/:id" => "actors#query_actor"
+
+    #body parameter
+    post "/body_actor" => "actors#query_actor"
+
   end
 
 end
