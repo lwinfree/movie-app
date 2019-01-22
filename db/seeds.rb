@@ -13,14 +13,28 @@
 # })
 # actor.save
 
-movie = Movie.create({
-  title: "The Usual Suspects", 
-  year: 1995, 
-  plot: "A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup."
-})
+# movie = Movie.create({
+#   title: "The Usual Suspects", 
+#   year: 1995, 
+#   plot: "A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup."
+# })
 
-movie = Movie.create({
-  title: "Beverly Hills Cop",
-  year: 1984,
-  plot: "A freewheeling Detroit cop pursuing a murder investigation finds himself dealing with the very different culture of Beverly Hills."
+# movie = Movie.create({
+#   title: "Beverly Hills Cop",
+#   year: 1984,
+#   plot: "A freewheeling Detroit cop pursuing a murder investigation finds himself dealing with the very different culture of Beverly Hills."
+# })
+
+actor = Actor.new({
+first_name: "Emma", 
+last_name: "Watson", 
+known_for: "Harry Potter"
 })
+actor.save
+
+actor = Actor.new({
+first_name: "Burt", 
+last_name: "Reynolds", 
+known_for: "Deliverance"
+})
+actor.save
