@@ -25,6 +25,8 @@ class Api::MoviesController < ApplicationController
   #   render 'star_wars.json.jbuilder'
   # end
 
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     @movies = Movie.where(english: :true)
     render 'movies.json.jbuilder'

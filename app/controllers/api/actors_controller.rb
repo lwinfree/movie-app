@@ -5,6 +5,8 @@ class Api::ActorsController < ApplicationController
   #   render 'actor.json.jbuilder'
   # end
 
+  before_action :authenticate_admin, except: [:index, :show]
+
   def query_actor
     id_number = params["id"]
     @single_actor = Actor.find_by(id: id_number)
