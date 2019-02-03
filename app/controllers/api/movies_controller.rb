@@ -29,7 +29,7 @@ class Api::MoviesController < ApplicationController
 
   def index
     @movies = Movie.where(english: :true)
-    render 'movies.json.jbuilder'
+    render 'index.json.jbuilder'
   end
 
   def create
