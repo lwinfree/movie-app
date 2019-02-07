@@ -1,0 +1,20 @@
+<h1>🎥 <%= @movie.title %> 🎥</h1> 
+<h3>Released in <%= @movie.year %></h3>
+<p><%= @movie.plot %></p>
+<form action="/movies" method="GET">
+  Viewed: 
+  <input type="checkbox" name="rating">
+</form>
+<form action="/movies" method="POST">
+  Rating:
+  <select name="simple">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select> stars <br>
+  <input type="text" value="write your review">
+  <input type="submit" name="submit">
+  <!-- note, not currently wired to submit -->
+</form>
